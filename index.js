@@ -3,6 +3,7 @@ Armar un algoritmo que recorra una estructura que
  guarde los puntos que N jugadores 
 sacaron en un partido jugando al SAPO. 
 Entregar quien fue el jugador ganador.
+Agrego un cambio para
 */
 
 // definir los datos que va a usar nuestro
