@@ -11,7 +11,7 @@ const datos = [
     {'nombre' : 'Ayelen', 'tiros' : [100, 2, 34, 5, 67]},
     {'nombre' : 'Marcos', 'tiros' : [21, 2, 4, 51, 47]},
     {'nombre' : 'Ivo', 'tiros' : [1, 24, 54, 12, 34]},
-    {'nombre' : 'Juan Manuel', 'tiros' :[2, 24, 54, 12, 340]},
+    {'nombre' : 'Juan Manuel', 'tiros' :[2, 24, 54, 12, 340]}
 ];
 /*
 la suma de cada uno
@@ -31,10 +31,24 @@ datos.forEach(persona => {
     nombre = persona.nombre;
     newA.push({nombre, puntos});
 });
-
-var newAsort = newA.sort(function (a, b) {return b.puntos-a.puntos;    
+newA.sort(function (a, b) {return b.puntos-a.puntos;    
 })
 
-console.log("El primer puesto es para " + newA[0].nombre + " con " + newA[0].puntos + " puntos");
-console.log("El segundo puesto es para " + newA[1].nombre + " con " + newA[1].puntos + " puntos");
-console.log("El tercer puesto es para " + newA[2].nombre + " con " + newA[2].puntos + " puntos");
+if (newA[0].puntos === newA[1].puntos) {
+    console.log("El primer puesto es para " + newA[0].nombre + " y " + newA[1].nombre + " con " + newA[0].puntos + " puntos");
+} else {
+    console.log("El primer puesto es para " + newA[0].nombre + " con " + newA[0].puntos + " puntos");
+};  
+
+if (newA[1].puntos === newA[2].puntos) {
+    console.log("El segundo puesto es para " + newA[1].nombre + " y " + newA[2].nombre + " con " + newA[1].puntos + " puntos");
+} else {
+    console.log("El segundo puesto es para " + newA[1].nombre + " con " + newA[1].puntos + " puntos");
+}  
+
+if (newA[2].puntos === newA[3].puntos) {
+    console.log("El tercer puesto es para " + newA[2].nombre + " y " + newA[3].nombre + " con " + newA[2].puntos + " puntos");
+} else {
+    console.log("El tercer puesto es para " + newA[2].nombre + " con " + newA[2].puntos + " puntos");
+}  
+
